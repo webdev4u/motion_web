@@ -1,0 +1,62 @@
+
+<div>
+  <h1><%= image_tag('camera24.png') %> Записи с камеры &quot;<%= @camcorder.name %>&quot;</h1>
+</div>
+
+<form class="form-search">
+	<div class="well">
+	  <div id="dtpickerFrom" class="input-append date">
+	    <label>Показать записи с</label>
+	    <input data-format="dd/MM/yyyy hh:mm:ss" type="text" name="dt_from" value="<%= params[:dt_from] %>"></input>
+	    <span class="add-on">
+	      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+	      </i>
+	    </span>
+	  </div>
+	  <div id="dtpickerTo" class="input-append date">
+	    <label>по</label>
+	    <input data-format="dd/MM/yyyy hh:mm:ss" type="text" name="dt_to" value="<%= params[:dt_to] %>"></input>
+	    <span class="add-on">
+	      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+	      </i>
+	    </span>
+	  </div>
+	  <button type="submit" class="btn btn-primary">Показать</button>
+	</div>
+	<script type="text/javascript">
+	  $(function() {
+	    $('#dtpickerFrom').datetimepicker({
+	      language: 'ru'
+	    });
+	  });
+	  $(function() {
+	    $('#dtpickerTo').datetimepicker({
+	      language: 'ru'
+	    });
+	  });
+	</script>
+
+<table class="table table-bordered table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>Дата и время</th>
+      <th>Действия</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @records.each do |rec| %>
+      <tr>
+        <td>
+        	<%= rec.event_timestamp.to_formatted_s(:db) %> 
+        </td>
+        <td>
+        	Скачать 
+        	<%= video_tag rec.filename, :size => "320x240", :controls => true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @records, renderer: BootstrapPagination::Rails, class: 'pager' %>
+
+</form>

@@ -1,0 +1,8 @@
+<h3>Просмотр с камеры &quot;<%= @camcorder.name %>&quot;</h3>
+<div>
+	<img src="<%= Settings.motion_server %>:<%= Settings.motion_port %><%= @camcorder.thread %>">
+</div>
+
+<div class="form-actions">
+  <%= link_to "Назад к живому просмотру", home_live_path, :class => "btn" %>
+</div>

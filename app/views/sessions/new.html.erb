@@ -1,0 +1,14 @@
+<%- model_class = User.new.class -%>
+<h1>Вход в систему</h1>
+
+<%= form_tag sessions_path do %>
+  <div class="field">
+    <%= label_tag model_class.human_attribute_name(:username) %><br />
+    <%= text_field_tag :username, params[:username] %>
+  </div>
+  <div class="field">
+    <%= label_tag model_class.human_attribute_name(:password) %><br />
+    <%= password_field_tag :password %>
+  </div>
+  <div class="actions"><%= submit_tag "Войти", :class => "button" %></div>
+<% end %>

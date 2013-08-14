@@ -1,0 +1,2 @@
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20130726111414_add_index_to_records.rb

@@ -1,0 +1,20 @@
+<table class="table table-bordered table-condensed table-hover">
+	<% cnt = 0 %>
+	<% @camcorders.each do |cam| %>
+		<% if cnt % 3 == 0 || cnt == 0 %>
+			<tr>
+		<% end %>
+    	<td>
+        <%= link_to home_view_path(:camcorder => cam.id) do %>
+    		  <img src="<%= Settings.motion_server %>:<%= Settings.motion_port %><%= cam.thread %>" width="320" height="240">
+        <% end %>
+    	</td>
+    <% cnt += 1 %>
+    <% if cnt % 3 == 0 %>
+			</tr>
+		<% end %>
+  <% end %>
+  <% if cnt % 3 != 0 %>
+  	</tr>
+  <% end %>
+</table>

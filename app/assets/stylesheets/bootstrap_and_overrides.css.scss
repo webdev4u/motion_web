@@ -1,0 +1,22 @@
+// Set the correct sprite paths
+$iconSpritePath: asset-url('glyphicons-halflings.png', image);
+$iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
+
+$navbarBackground: #555;
+$navbarBackgroundHighlight: #888;
+$navbarText: #eee;
+$navbarLinkColor: #eee;
+
+@import "bootstrap";
+@import "bootstrap-datetimepicker";
+
+body { 
+	padding-top: 60px;
+	padding-left: 20px;
+}
+
+@import "bootstrap-responsive";
+
+.navbar .brand {
+  color: #FAFFB8;
+}

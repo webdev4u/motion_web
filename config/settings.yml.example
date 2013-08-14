@@ -1,0 +1,5 @@
+# Address of the motion server
+motion_server: http://192.168.0.2
+# Port number which motion server is listening without last symbol, because thread number will be added here
+# In example case motion is listening on port 8080
+motion_port: 808
