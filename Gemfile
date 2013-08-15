@@ -20,10 +20,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 
   gem 'bootstrap-sass'
-  gem 'cancan'
   gem 'russian', '~> 0.6.0'
 end
 
+gem 'cancan'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
