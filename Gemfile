@@ -71,3 +71,5 @@ end
 group :development do
   gem 'capistrano-deploy', '~> 0.1.1', :require => nil
 end
+
+gem 'therubyracer'
