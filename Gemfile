@@ -63,3 +63,11 @@ gem 'bootstrap-datetimepicker-rails'
 # gem "mediaelement_rails"
 # gem 'ledermann-rails-settings', :require => 'rails-settings'
 gem 'rails_config'
+
+group :production do
+  gem 'unicorn', '~> 3.6.2', :require => nil
+end
+
+group :development do
+  gem 'capistrano-deploy', '~> 0.1.1', :require => nil
+end
