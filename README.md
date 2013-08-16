@@ -24,3 +24,5 @@ ffmpeg_video_codec ogg
 3. rake db:migrate
 4. rake db:seed
 5. Для проверки можно будет запустить rails s. Сервер будет слушать на 3000 порту. Если все нормально, можно работать.
+
+Если в логах будет выскакивать ошибка типа: "ActionView::Template::Error (application.css isn't precompiled):", вероятно придется еще запустить следующую команду rake assets:precompile.
