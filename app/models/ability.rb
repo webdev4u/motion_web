@@ -13,6 +13,8 @@ class Ability
         can :read, :all
     elsif user.role == "viewer"
         can :read, :root
+        can :read, Camcorder
+        can :read, Record
     else
         can :read, :root
     end

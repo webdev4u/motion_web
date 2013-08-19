@@ -21,8 +21,7 @@ ffmpeg_video_codec ogg
 Установка.
 1. Клонировать при помощи git сайт.
 2. Переименовать config/database.yml.example в config/database.yml и вписать туда настройки для вашей базы.
-3. rake db:migrate
-4. rake db:seed
-5. Для проверки можно будет запустить rails s. Сервер будет слушать на 3000 порту. Если все нормально, можно работать.
-
-Если в логах будет выскакивать ошибка типа: "ActionView::Template::Error (application.css isn't precompiled):", вероятно придется еще запустить следующую команду rake assets:precompile.
+3. Измените данные в db/seeds.rb для пользователя admin.
+4. rake db:migrate
+5. rake db:seed
+6. Для проверки можно будет запустить rails s. Сервер будет слушать на 3000 порту. Если все нормально, можно работать.
