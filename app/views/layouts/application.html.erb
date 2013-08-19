@@ -67,7 +67,7 @@
 			<div class="span3">
         <h2>Меню</h2>
         <ul class="list-group">
-          <% if current_user && current_user.role.in?(%w[admin operator]) %>
+          <% if current_user && current_user.role.in?(%w[admin operator viewer]) %>
             <li class="list-group-item">
               <%= link_to camcorders_path do %>
                 <%= image_tag('camera24.png') %> Камеры
