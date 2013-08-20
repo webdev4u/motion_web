@@ -40,7 +40,7 @@
   <thead>
     <tr>
       <th>Дата и время</th>
-      <th>Действия</th>
+      <th>Просмотр</th>
     </tr>
   </thead>
   <tbody>
@@ -50,7 +50,6 @@
         	<%= rec.event_timestamp.to_formatted_s(:db) %> 
         </td>
         <td>
-        	Скачать 
         	<%= video_tag rec.filename, :size => "320x240", :controls => true %>
         </td>
       </tr>
