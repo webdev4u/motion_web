@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130726111414) do
+ActiveRecord::Schema.define(:version => 20130820113915) do
 
   create_table "camcorders", :force => true do |t|
     t.integer  "thread"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20130726111414) do
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "stream_port"
   end
 
   create_table "records", :force => true do |t|

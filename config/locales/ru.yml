@@ -310,6 +310,7 @@ ru:
       camcorder:
         thread: "Номер камеры"
         name: "Название камеры"
+        stream_port: "Порт потокового вещания"
         description: "Описание"
   will_paginate:
     previous_label: "Предыдущая"

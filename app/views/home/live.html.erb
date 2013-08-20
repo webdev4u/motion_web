@@ -6,7 +6,7 @@
 		<% end %>
     	<td>
         <%= link_to home_view_path(:camcorder => cam.id) do %>
-    		  <img src="<%= Settings.motion_server %>:<%= Settings.motion_port %><%= cam.thread %>" width="320" height="240">
+    		  <img src="<%= Settings.motion_server %>:<%= cam.stream_port %>" width="320" height="240">
         <% end %>
     	</td>
     <% cnt += 1 %>
